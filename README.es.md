@@ -58,14 +58,13 @@ Un nuevo repositorio se creará en tu cuenta.
 
 ### Paso 2: Instalación y Configuración de DVWA:
 - [ ] Descargar DVWA desde el enlace proporcionado
-
 ```sh
 cd /var/www/html 
 sudo apt-get install wget unzip
 sudo wget https://storage.googleapis.com/breathecode/virtualbox/DVWA.zip sudo unzip DVWA.zip 
-sudo mv DVWA-master DVWA
-
+sudo mv digininja-DVWA-34a10d4 DVWA
 ```
+
 - [ ] Configurar DVWA
 Cambia al directorio DVWA y renombra el archivo de configuración
 ```sh
@@ -77,9 +76,9 @@ sudo cp config.inc.php.dist config.inc.php
 sudo nano config.inc.php
 ```
 > 💡 IMPORTANTE: Asegúrate de que las siguientes líneas tengan las credenciales correctas:
+* $_DVWA[ 'db_database' ] = 'dvwa';
 * $_DVWA[ 'db_user' ] = 'root';
 * $_DVWA[ 'db_password' ] = 'tu_contraseña_de_root'; 
-* $_DVWA[ 'db_database' ] = 'dvwa';
 
 - [ ] Configurar la Base de Datos
 Inicia sesión en MariaDB y crea la base de datos DVWA
